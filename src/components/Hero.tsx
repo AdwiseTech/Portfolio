@@ -1,12 +1,10 @@
+import { stats } from "@/constants";
 import styles from "@/styles/style";
 import Image from "next/image";
 
 export default function Hero() {
-  return (
-    <section
-      id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY}`}
-    >
+  return (<>
+    <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
       {/* Left Content */}
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
         <div className=" flex flex-row items-center py-2 px-4 bg-discount-gradient rounded-[10px] mb-2">
@@ -18,8 +16,8 @@ export default function Hero() {
         </div>
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
-            Adwise Technology{" "}
-            <span className="text-gradient">Generation</span>{" "}
+            Adwise Technology{" "} <br className="sm:block hidden" />
+            <span className="text-gradient">ERP & EMS System</span>{" "}
           </h1>
           <div className="ss:flex hidden md:mr-4 mr-0">
             {/*  <GetStarted /> */}
@@ -36,11 +34,11 @@ export default function Hero() {
       <div className="flex-1 flex justify-center items-center relative md:my-0 my-10">
         <div className="relative w-full h-[450px] sm:h-[550px]">
           <Image
-            src="/technology_rbg.png"
-            alt="billings"
+            src="/home_logo.png"
+            alt="ERP Illustration"
             fill
             priority
-            className="w-[100%] h-[100%] relative z-[5]"
+            className="object-contain z-10 animate-float"
           />
         </div>
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
@@ -50,6 +48,22 @@ export default function Hero() {
       {/* <div className={`flex justify-center items-center ss:hidden`}>
         {/* <GetStarted /> 
       </div> */}
-    </section>
-  );
+   </section>  
+    <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>
+ {
+    stats.map((stat) => (
+      <div
+        key={stat.id}
+        className={`flex-1 flex justify-start items-center flex-row m-3`}
+      >
+        <h4 className="font-poppins font-semibold xs:text-[40px] text-[30px] xs:leading-[53px] leading-[43px] text-white">
+          {stat.value}
+        </h4>
+        <p className="font-poppins font-normal xs:text-[20px] text-[15px] xs:leading-[26px] leading-[21px] text-gradient uppercase ml-3">
+          {stat.title}
+        </p>
+      </div>
+    ))}   </section> 
+    
+  </>);
 }
