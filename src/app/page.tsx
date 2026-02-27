@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer"; 
 import Hero from "@/components/Hero"; 
 import AboutPage from "./about/page";
+import OurTeam from "./team/page";
 import ServicesPage from "./services/page";
 import ContactPage from "./contact/page";
 import styles from "@/styles/style";
@@ -24,6 +25,7 @@ export default function Home() {
           <div className={`${styles.boxWidth}`}>
              <ServicesPage />
             <AboutPage />
+            <OurTeam />
             <ContactPage />
              {/*<Business />
             <Billing />

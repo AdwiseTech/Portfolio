@@ -1,6 +1,7 @@
 export default function ServicesPage() {
   return (
-    <section className="py-20 bg-slate-900">
+    <>
+     {/* <section className="py-20 bg-slate-900"> */}
       <h2 className="text-3xl text-center font-bold mb-12">
         Our Services
       </h2>
@@ -27,6 +28,7 @@ export default function ServicesPage() {
           </p>
         </div>
       </div>
-    </section>
+    {/* </section> */}
+    </>
   )
 }
