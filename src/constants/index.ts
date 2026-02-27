@@ -198,3 +198,22 @@ export const clients = [
         logo: "dropbox.png",
     },
 ];
+
+
+export const teamMembers = [
+  {
+    name: "Lindsay Walton",
+    role: "Front-end Developer",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
+  },
+  {
+    name: "Courtney Henry",
+    role: "Designer",
+    image: "https://randomuser.me/api/portraits/men/2.jpg",
+  },
+  {
+    name: "Tom Cook",
+    role: "Director of Product",
+    image: "https://randomuser.me/api/portraits/men/3.jpg",
+  },
+];
